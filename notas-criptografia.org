@@ -11,6 +11,10 @@
   - Estructuras de datos (Python)
   - Matematicas para la ciberseguridad
   - Ciberseguridad
+  - Manipulacion de archivos de texto y binarios
+  - Manipulacion de cadenas de texto y binarios
+  - Manipulacion de datos binarios
+  - Sockets TCP
 ** Evaluación:
 - Examenes: 60%
 - Tareas y practicas: 20%
@@ -93,6 +97,9 @@ Datos pueden estar en 3 estados:
 - Nunca utilices un metodo criptografico si no entiendes su contexto de uso y su correcta configuración.
 - Nunca utilices un metodo criptografico usando la configuración por defecto a menos que la conozcas.
 - Revisa bien los metodos criptograficos que aplicaras muchos tienen vulnerabilidades conocidas.
+- TLS: Transport Layer Security, es la base para otras tecnologias como HTTPS y VPN.
+- OpenSSL
+- Determinismo -> Es predecible
 
 *** Tres protecciones principales de la criptografia
 - Autenticidad: Firmas digitales, Codigos MAC.
@@ -102,7 +109,7 @@ Datos pueden estar en 3 estados:
 *** AES
 - Estandar de cifrado asimetrico.
 
-** YANAC
+*** YANAC
 - YANAC: You Are Not A Criptographer. Acronimo popular en la comunidad criptografica.
 - Dont roll your own crypto.
 - Es mas facil usar mal los metodos criptograficos que usarlos bien.
@@ -110,3 +117,33 @@ Datos pueden estar en 3 estados:
 - Hasta expertos criptograficos han creado metodos con vulnerabilidades.
 - Un nuevo metodo pasa por muchas revisiones de expertos antes de ser usado de forma practica.
 - Incluso debes de abstenerte de hacer tus propias
+
+*** Codificar
+- Transformar de una representacion a otra sin perdida.
+- Base64
+
+*** Cifrar
+- Es el proceso de convertir informacion sensible en un formato ilegible mediante un secreto (llave) a las que solo partes autorizadas tienen acceso.
+
+*** Ofuscar
+- Se refiere a encubrir el significado haciendola mas confusa y complicada de interpretar.
+
+*** Hashear
+- Es la funcion de aplicar una funcion de hash, es decir, que transforma un conjunto de datos en una cadena alfanumerica unica que actua como una huella digital del contenido original. No es invertible.
+
+*** Cifrado cesar
+- Se basaen reemplazar una letra de un mensaje por otra letra.
+- Se puede aplicar tanto a texto como a binario.
+- Si es binario debe considerarse el modulo 256, si es texto debe cuidarse el valor ASCII
+
+*** Aritmetica Modular
+- 4 % 4
+- (144 + 300) % 256 = 188
+- (188 - 300) % 256 = 144
+- El resultado sera siempre un numero natural.
+-
+
+*** Binario
+- El binario se manipula en paquetes de bytes (8 bits), no se puede manipular directamentes menos (al menos en las arquitecturas populares modernas).
+
+- Tarea: Cifrado cesar para archivo de texto.
